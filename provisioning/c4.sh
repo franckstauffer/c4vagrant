@@ -15,6 +15,8 @@ apt-get -y  install openjdk-7-jre-headless
 dpkg -i elasticsearch-0.90.5.deb
 service elasticsearch start
 rm elasticsearch-0.90.5.deb
+wget -O /usr/local/bin/phpunit https://phar.phpunit.de/phpunit.phar -q 
+chmod +x /usr/local/bin/phpunit
 apt-get -y install git
 wget -qO- https://getcomposer.org/installer | php
 php composer.phar --keep-vcs --stability=dev create-project rbschange/change /vagrant/c4
