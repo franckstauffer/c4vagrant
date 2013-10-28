@@ -1,0 +1,24 @@
+{
+	"Change":{
+		"Application":{
+			"development-mode":false,
+			"php-cli-path":"/usr/bin/php"
+		},
+		"Db":{
+			"default":{
+				"host":"127.0.0.1",
+				"user":"root",
+				"password":"root",
+				"database":"rbschange",
+				"port":3306,
+				"longTransaction":10
+			}
+		},
+		"I18n":{
+			"supported-lcids":["fr_FR", "en_US"],
+			"langs":{
+				"en_US":"en"
+			}
+		}
+	}
+}
