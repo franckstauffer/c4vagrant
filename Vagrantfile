@@ -10,9 +10,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "saucy64"
+  config.vm.box = "saucy64change"
   config.vm.host_name = "change4"
-  config.vm.box_url = "https://dl.dropbox.com/s/fwyp1a4g049rmg0/saucy64.box?dl=1"
+  config.vm.box_url = "http://c4.lowcoders.net/saucy64change.box"
   
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.

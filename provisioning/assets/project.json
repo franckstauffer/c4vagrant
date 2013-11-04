@@ -20,5 +20,14 @@
 				"en_US":"en"
 			}
 		}
+	},
+	"Rbs":{
+		"Elasticsearch":{
+			"clients":{
+				"front":{
+					"url":"http:\/\/localhost:9200\/"
+				}
+			}
+		}
 	}
 }
