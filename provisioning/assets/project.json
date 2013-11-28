@@ -1,7 +1,7 @@
 {
 	"Change":{
 		"Application":{
-			"development-mode":false,
+			"development-mode":true,
 			"php-cli-path":"/usr/bin/php"
 		},
 		"Db":{

@@ -19,9 +19,12 @@ if [ ! -d  /vagrant/c4 ]; then
 	php bin/change.phar change:install-package --vendor=Rbs ECom
 	php bin/change.phar change:install-plugin --vendor=Rbs Elasticsearch
 	php bin/change.phar change:install-plugin --type=theme --vendor=Rbs Demo
+	php bin/change.phar change:compile-i18n
 	php bin/change.phar rbs_user:add-user change4@bobmail.info admin --realms=Rbs_Admin,web --is-root=true --password=admin	
 fi
+a2enmod rewrite
 cp /vagrant/provisioning/assets/001-change.conf /etc/apache2/sites-available/
 a2ensite 001-change.conf
 a2dissite 000-default.conf
 service apache2 restart
+crontab /vagrant/provisioning/assets/crontab.file
