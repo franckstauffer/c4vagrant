@@ -6,7 +6,7 @@ if [ ! -d  /vagrant/c4 ]; then
 	php composer.phar --keep-vcs --stability=dev create-project rbschange/change /vagrant/c4
 	mkdir /vagrant/c4/bin
 	mkdir /vagrant/c4/www
-	wget -O /vagrant/c4/bin/change.phar http://www.rbschange.fr/static/change.phar -q
+	wget -O /vagrant/c4/bin/change.phar http://github.com/RBSChange/skeleton-project/raw/master/bin/change.phar -q
 	mysql -u root -proot -e 'create database rbschange;'
 	mkdir -p /vagrant/c4/App/Config
 	cp /vagrant/provisioning/assets/project.json /vagrant/c4/App/Config
@@ -17,7 +17,6 @@ if [ ! -d  /vagrant/c4 ]; then
 	php bin/change.phar change:register-plugin --all
 	php bin/change.phar change:install-package --vendor=Rbs Core
 	php bin/change.phar change:install-package --vendor=Rbs ECom
-	php bin/change.phar change:install-plugin --vendor=Rbs Elasticsearch
 	php bin/change.phar change:install-plugin --type=theme --vendor=Rbs Demo
 	php bin/change.phar change:compile-i18n
 	php bin/change.phar rbs_user:add-user change4@bobmail.info admin --realms=Rbs_Admin,web --is-root=true --password=admin	
